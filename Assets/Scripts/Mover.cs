@@ -1,15 +1,13 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Mover : MonoBehaviour {
 
-    protected Rigidbody2D rb;
-    [SerializeField] protected float speed;
-    [SerializeField] protected Vector2 direction;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private float speed;
+    [SerializeField] private Vector2 direction;
 
-    private void Awake() {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    public float Speed { get => speed; set => speed = value; }
+    public Vector2 Direction { get => direction; set => direction = value; }
 
     protected virtual void FixedUpdate() {
         var position = rb.position;

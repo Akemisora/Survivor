@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 
-public class PlayerMover : Mover {
+public class PlayerController : MonoBehaviour {
+
+    [SerializeField] private Mover mover;
+
 
     private void Update() {
-        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        mover.Direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
     }
 
-    protected override void FixedUpdate() {
-        var position = rb.position;
-        position += speed * Time.fixedDeltaTime * direction;
-        position = WorldBorder.WorldBounds.ClosestPoint(position);
-        rb.MovePosition(position);
-    }
 }
