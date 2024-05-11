@@ -8,5 +8,14 @@ public class Health : MonoBehaviour, IDamagable {
 
     public int Hp { get => hp; set => hp = value; }
 
-    public void TakeDamage(int damage) => hp -= damage;
+    public void TakeDamage(int damage) {
+        hp -= damage;
+        if (hp <= 0) {
+            Die();
+        }
+    }
+
+    public void Die() {
+        Destroy(gameObject);
+    }
 }
