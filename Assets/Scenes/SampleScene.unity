@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 1852024396}
   - component: {fileID: 1852024397}
   - component: {fileID: 1852024398}
+  - component: {fileID: 1852024400}
   - component: {fileID: 1852024399}
   m_Layer: 3
   m_Name: Player
@@ -699,6 +700,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: {fileID: 1852024399}
   mover: {fileID: 1852024393}
+  shooter: {fileID: 1852024398}
+  melee: {fileID: 1852024400}
 --- !u!50 &1852024392
 Rigidbody2D:
   serializedVersion: 4
@@ -839,6 +842,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
+--- !u!114 &1852024400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852024388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd575e6ebbebc041962cc1e2a710072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 733387567}
+  prefab: {fileID: 2213024857996901089, guid: f5f81d32ce92a924687160a4f44eb0bd, type: 3}
 --- !u!1 &2084746194
 GameObject:
   m_ObjectHideFlags: 0
